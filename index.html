@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script type="text/javascript" src="util.js"></script>
+        <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="jquery.touchy.js"></script> <!-- version 1.0 -->
+        <script type="text/javascript" src="networkconnection.js"></script> 
+	    <script type="text/javascript" src="pdf.js"></script>
+    	<script type="text/javascript">
+	    	PDFJS.workerSrc = "pdf.worker.js";
+    	</script>
+        <script type="text/javascript" src="pdfrenderer.js"></script>
+        <script type="text/javascript" src="pagecache.js"></script>
+        <script type="text/javascript" src="pagedisplay.js"></script>
+        <script type="text/javascript" src="mousecontroller.js"></script>
+    	<script type="text/javascript" src="vex.js"></script>
+	    <script type="text/javascript" src="vex.dialog.js"></script>
+        <script type="text/javascript" src="jquery.qtip.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <link rel="stylesheet" href="high-lite.css">
+    	<link rel="stylesheet" href="vex.css">
+	    <link rel="stylesheet" href="vex-theme-wireframe.css">
+        <link rel="stylesheet" href="jquery.qtip.min.css">
+    </head>
+    <body>
+        <div id="box">
+            <div id="log" style="overflow:auto;height:100px;border:1px solid;display:none;">
+            </div>
+            <button onclick="openPDF()"> Open PDF </button>
+            <button onclick="help()"> Help </button>
+            <button onclick="prevPage()"> &lt;&lt;&lt; </button>
+            <button onclick="nextPage()"> &gt;&gt;&gt; </button>
+            <button onclick="gotoPage()"> Go to page </button>
+            <button onclick="rotate()"> Rotate </button>
+            <button onclick="highlight()"> Toggle highlight </button>
+            <button onclick="reset()"> Reset view </button>
+            <span id="showingpage" style="display:none">Showing page: <span id="showingpagenum"></span></span>
+        </div>
+        
+        <div id="pagedisplay"></div>
+        <div id="barctrl"></div>
+
+        <div id="pagetop">&nbsp;</div>
+        <div id="pagebottom">&nbsp;</div>
+    </body>
+</html>
+

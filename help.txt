@@ -1,0 +1,99 @@
+High-lite
+=========
+
+In this web application you can load a PDF, of which you can then
+navigate through the pages. You can also zoom in, zoom out and
+rotate pages if needed. The real goal of this site is to be able
+to highlight a specific part of a page while obscuring the rest,
+making it easier to keep track of the highlighted part of the page.
+
+I'm not sure for what other purposes this can be useful, but I made
+this with knitting patterns in mind. Using this web page you can
+highlight a specific line from a knitting pattern, making it easy
+to keep track of what you're doing. In case you're wondering why
+I would make such a program: my wife loves knitting, and I love my
+wife.
+
+Help
+----
+
+### Opening a PDF ###
+
+To be able to do anything, you must first load the PDF file that you
+want to view. When you press the `Open PDF` button, you'll see a
+small window appear in which you can choose one of two possibilities:
+
+ 1. **Load a Dropbox share**: choose this option if you have a PDF file on your
+    Dropbox account that you want to use. In another browser window, 
+    you'll need to log into your account on the Dropbox web page. If you right 
+    click the PDF file you'll see the option to share the file and that should provide you with
+    a link that looks like 
+
+        https://www.dropbox.com/s/XXXXXXXXXXXXXX/file.pdf
+
+    It is this link that can be used in the `Enter URL` box of the high-lite
+    web application.
+ 2. **Load a local file**: if you already have the file on your computer or
+    tablet, you can use this option to load it into the application.
+
+#### Why only Dropbox? ###
+
+After you've opened the high-lite web page, everything happens in your browser,
+on your computer. There's no further communication with any of my own web services.
+When you want to download a PDF file into the web application, some JavaScript
+program code is executed to download a the specified URL into the web application.
+But downloading something into this application is somewhat different than just
+opening an URL in your browser, there are certain restrictions. The web server
+you're downloading the data from has to indicate that it allows the use of this
+data in the web application.
+
+Most web servers do not allow just any web application to download data, but
+Dropbox does. For this reason I've currently limited the URLs you can specify
+to Dropbox URLs. While the web application in principle could allow you to specify
+any URL, because of the mentioned download limitation in a web application, you'd
+just be confronted with error messages for almost any other URL you'd specify.
+
+### Manipulating the pages ###
+
+Once you have opened a PDF, you should see the first page. There are several things
+you can do now:
+
+ 1. Go to the next (or previous) page:  
+    By clicking on the buttons `<<<` and `>>>` you can change the page that's displayed.
+    On a tablet, you should be able to swipe left or right to change the page.
+ 2. Moving the page:  
+    By pressing the left mouse button, keeping it pressed and moving the mouse, you can
+    move the page around. On a tablet, just place your finger on the page and move it.
+ 3. Zoom in or zoom out:  
+    You can zoom in or out by just using the scroll wheel of your mouse. On a tablet,
+    you can zoom using the pinch gesture: place your thumb and index finger on the
+    tablet and move them apart or closer together to change the scale of the page.
+ 4. Rotate the page:  
+    By clicking the `Rotate` button, you can change the rotation of a page in the PDF.
+ 5. Toggle highlighting mode:  
+    By clicking the `Toggle highlight` button, you can enable or disable the highlighting
+    mode. On a tablet, you can also swipe up or down on the darker part of the page you
+    can see on the right. It doesn't matter if you swipe up or down, the effect is just to
+    toggle the highlighting mode. Performing such a toggle will change something like this  
+    <img src="high-lite1.png" style="width:100%">  
+    into something like this:  
+    <img src="high-lite2.png" style="width:100%">  
+    You should see most of the page becoming darker, with only a rather narrow line being
+    shown clearly. If you don't see this bright line immediately it is probably just outside
+    your current view. Just zoom out a bit to get it to appear.
+ 6. Moving the highlighted line:  
+    When the highlighting mode is enabled, you can start to move the brighter line up and down by
+    pressing the left mouse button when your mouse pointer is over the darker part at the
+    right of the page. By keeping the mouse button pressed and moving the mouse up or down, you
+    will change the position of the bright line. On a tablet, just put your finger on the darker
+    part on the right side of the page and move it up or down.
+ 7. Changing the width of the bright line:  
+    You can also change the width of the bright bar that's shown, but in the current version
+    the same width will be used on all pages. To change the width, place the mouse pointer in 
+    the darker area and use the scroll wheel to make the line wider or narrower. On a tablet,
+    use the pinch gesture on that part of the web page to control the width of the line.
+
+Contact
+-------
+You can find contact information on [my Google+ page](https://plus.google.com/107709244254418689195/about).
+
